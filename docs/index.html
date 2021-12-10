@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to create stored rocedures</title>
+    <meta name="description" content="In this website we are going to describe and show how to make stored procedures with SQL Server and MySQL">
+</head>
+<body>
+    <form action="">
+        <p>Author:Mahonri Martinez Date: 09 December 2021 </p>
+        <br>
+        <h1>Introduction</h1>
+        <p>
+            Welcome to this blog in which we are going to learn how to create stored procedures. In the word of databases we have several tools for stored data.
+            With a DBMS we can create a lot of things such as databases,tables, functions,stored procedures.
+        </p>
+        <br>
+        <h2>What is a stored procedure?</h2>
+        <p>
+          It is a prepared SQL code that we can use for read data, insert data,delete data and update data.
+          If you use a lot of DML commands, you should use stored procedures.In some cases is better to use stored procedures than the DML command.
+          Sometimes we can implement stored procedures when we are doing a CRUD application.
+        </p>
+        <h3>How to make a stored procedure?</h3>
+        <p>We can make stored procedure in several ways in this blog we are going to show how to make stored procedures in SQL Server and MySQL.
+            This two DBMS are pretty similar there are a little different in the part of stored procedures.
+            SQL Server use the Transct-SQL and MySQL use SQL.SQL Server is a product of Microsoft while MySQL is from Oracle.
+        </p>
+        <P>In SQL Server we can create a stored procedure following the next scructure</P>
+        <ul>
+            <li>In this procedure we start with the word create and then procedure or proc are the same then we have to put a name to our procedure.
+                If our procedure use a parameter we can declare as many as we need with @name type separated by a , each parameter.
+                The third part is use the words as and begin. Finally we can use the DML command in this case insert and the word end
+            </li>
+            <li>Create procedure nameofprocedure</li>
+            <li>@parmaters type</li>
+            <li>as begin</li>
+            <li>Insert into tablename values(@parmaters)</li>
+            <li>END</li>
+        </ul>
+        <p>Example of procedure in SQL Server</p>
+        <p>
+        Create procedure spaddcamion
+        @idcamion int,
+        @descripcion varchar(50),
+@placa varchar(20),@marca varchar(30),@modelo varchar(30)
+as
+Begin
+Insert into camion values(@idcamion,@descripcion,@placa,@marca,@modelo)
+END
+        </p>
+        <p>Create a stored procedure in MySQL</p>
+        <p>In MySQL It is different to create a procedure for insert data we have to use the next word before Create  DELIMITER // 
+            Then we use the word create procedure and the name of the procedure.Then we have to open (inside here we have to define if the parameter is IN/OUT/INOUT name type ) begin DML command; End //  
+        </p>
+        <p>Example of procedure in MySQL</p>
+        <script src="https://gist.github.com/MahonriM/317320a2581e70afc9463ff014f25174.js"></script>
+    </form>
+</body>
+</html>
