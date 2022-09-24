@@ -40,17 +40,8 @@
             <li>Insert into tablename values(@parmaters)</li>
             <li>END</li>
         </ul>
-        <p>Example of procedure in SQL Server</p>
-        <p>
-        Create procedure spaddcamion
-        @idcamion int,
-        @descripcion varchar(50),
-@placa varchar(20),@marca varchar(30),@modelo varchar(30)
-as
-Begin
-Insert into camion values(@idcamion,@descripcion,@placa,@marca,@modelo)
-END
-        </p>
+        <p>Example of a stored procedure made in SQL Server</p>
+    <script src="https://gist.github.com/MahonriM/579697b63d650aff378a687f952c833e.js"></script>
         <p>Create a stored procedure in MySQL</p>
         <p>In MySQL It is different to create a procedure for insert data we have to use the next word before Create  DELIMITER // 
             Then we use the word create procedure and the name of the procedure.Then we have to open (inside here we have to define if the parameter is IN/OUT/INOUT name type ) begin DML command; End //  
